@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: flex; 
+}
+
+.numberbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 630px;
+    border: 1px solid #172f5246;
+    border-radius: 30px;
+}
+.lotto{
+    margin: 100px 0px 50px 0px;
+    font-size: 40px;
+    color:rgba(7, 28, 60, 0.704);
+}
+
+.lottonumber-box {
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 30px;
+    height: 30px;
+    border: 2px solid #172f5246;
+    border-radius: 3px;
+}
+
+.make-button {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #081c3a46;
+    border-radius: 10px;
+    background-color: white;
+    color:rgba(7, 28, 60, 0.704);
+}
+.make-button:hover {
+    background-color: rgba(7, 28, 60, 0.443);
+    color:white;
+}
+.make-button:active {
+    background-color: rgba(7, 28, 60, 0.704);
+    color:white;
+}

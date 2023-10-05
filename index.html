@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto</title>
+    <link rel="stylesheet" href="./lotto.css">
+</head>
+<body>
+    <div id="root">
+        <div class="numberbox-container">
+            <div class="lotto">Lotto</div>
+            <div class="lottonumber-box"> </div>
+            <div class="lottonumber-box"> </div>
+            <div class="lottonumber-box"> </div>
+            <div class="lottonumber-box"> </div>
+            <div class="lottonumber-box"> </div>
+            <div class="lottonumber-box"> </div>
+            <button class="make-button" id="generate-button">Good luck!</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('generate-button').addEventListener('click', generateNumbers);
+
+        function generateNumbers() {
+            const numbers = [];
+            while (numbers.length < 6) {
+                const randomNumber = Math.floor(Math.random() * 45) + 1;
+                if (!numbers.includes(randomNumber)) {
+                    numbers.push(randomNumber);
+                }
+            }
+            
+            numbers.sort((a, b) => a - b); // 숫자를 오름차순으로 정렬
+
+            const lottonumberBoxes = document.querySelectorAll('.lottonumber-box');
+            for (let i = 0; i < 6; i++) {
+                lottonumberBoxes[i].textContent = numbers[i];
+            }
+        }
+    </script>
+</body>
+</html>
